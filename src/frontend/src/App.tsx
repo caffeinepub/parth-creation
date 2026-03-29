@@ -233,7 +233,7 @@ function Hero() {
           transition={{ duration: 0.6 }}
           className="text-gold text-sm tracking-[0.35em] uppercase mb-4 font-poppins"
         >
-          Surat, India • Est. 2013
+          Surat, India • Est. 2007
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -1017,7 +1017,7 @@ function Footer() {
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Precision embroidery specialists serving B2B clients across India
-              since 2013.
+              since 2007.
             </p>
           </div>
 
