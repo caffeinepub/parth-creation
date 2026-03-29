@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* OKLCH tokens — warm cream + deep teal + gold */
+    --background: 96.5 0.018 85; /* warm cream #F5F0E6 */
+    --foreground: 20.2 0.028 65; /* near-black charcoal #1F1B16 */
+    --card: 97 0.012 85; /* white-cream #FAF7F2 */
+    --card-foreground: 20.2 0.028 65;
+    --popover: 97 0.012 85;
+    --popover-foreground: 20.2 0.028 65;
+    --primary: 35 0.09 165; /* deep teal #0F5A55 */
+    --primary-foreground: 99 0 0; /* white */
+    --secondary: 90 0.02 85;
+    --secondary-foreground: 20.2 0.028 65;
+    --muted: 92 0.015 85;
+    --muted-foreground: 48 0.025 60; /* muted gray-brown #5E564D */
+    --accent: 72 0.08 72; /* muted gold #C6A35A */
+    --accent-foreground: 20.2 0.028 65;
+    --destructive: 30 0.18 25;
+    --destructive-foreground: 99 0 0;
+    --border: 85 0.03 80; /* light gold/beige */
+    --input: 85 0.03 80;
+    --ring: 35 0.09 165;
+    --radius: 0.75rem;
+
+    /* Custom brand tokens */
+    --teal: 35 0.09 165;
+    --teal-dark: 30 0.085 165;
+    --gold: 72 0.08 72;
+    --gold-light: 78 0.06 72;
+    --cream: 96.5 0.018 85;
+    --charcoal: 20.2 0.028 65;
+    --gray-brown: 48 0.025 60;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Cinzel", serif;
+  }
+
+  * {
+    border-color: oklch(var(--border));
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal text-white px-6 py-3 rounded-lg font-medium text-sm tracking-wide transition-all duration-200 hover:bg-teal-dark hover:shadow-md active:scale-95;
+  }
+
+  .section-title {
+    @apply font-cinzel text-3xl md:text-4xl text-charcoal tracking-wide;
+  }
+
+  .gold-divider {
+    @apply w-16 h-0.5 bg-gold mx-auto my-4;
+  }
+}
